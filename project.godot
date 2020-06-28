@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="DreamCats"
-run/main_scene="res://Scenes/prototypescene.tscn"
+run/main_scene="res://Scenes/GenerateMap.tscn"
 config/icon="res://icon.png"
 
 [input]
