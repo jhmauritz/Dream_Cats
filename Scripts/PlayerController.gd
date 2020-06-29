@@ -12,6 +12,7 @@ var velocity = Vector2.ZERO
 func get_input():
 	var dir = 0
 	if Input.is_action_pressed("move_right"):
+		$AnimatedSprite.play("WalkRight")
 		dir += 1
 	if Input.is_action_pressed("move_left"):
 		dir -= 1
