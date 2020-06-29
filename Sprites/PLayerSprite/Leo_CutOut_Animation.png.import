@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/LeoWalkLeft2.png-6a1fc01130dbd666f239f58d3c6e1bad.stex"
+path="res://.import/Leo_CutOut_Animation.png-8679b4834b501e12ac92bb1d05b48c61.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/PLayerSprite/LeoWalkLeft2.png"
-dest_files=[ "res://.import/LeoWalkLeft2.png-6a1fc01130dbd666f239f58d3c6e1bad.stex" ]
+source_file="res://Sprites/PLayerSprite/Leo_CutOut_Animation.png"
+dest_files=[ "res://.import/Leo_CutOut_Animation.png-8679b4834b501e12ac92bb1d05b48c61.stex" ]
 
 [params]
 
