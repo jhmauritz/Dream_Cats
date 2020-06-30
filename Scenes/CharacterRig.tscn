@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Sprites/PLayerSprite/Leo_CutOut_Animation.png" type="Texture" id=1]
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id=1]
 resource_name = "IdleStance"
 step = 0.8
 tracks/0/type = "value"
@@ -150,8 +150,7 @@ tracks/11/keys = {
 "values": [ 0.0, 0.0, 0.0 ]
 }
 
-[sub_resource type="Animation" id=1]
-resource_name = "Walk"
+[sub_resource type="Animation" id=2]
 step = 0.8
 tracks/0/type = "value"
 tracks/0/path = NodePath("Torso_lower:position")
@@ -298,7 +297,7 @@ tracks/11/keys = {
 "values": [ 0.0, 40.1835, 0.0, -46.5301, 0.0 ]
 }
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=3]
 resource_name = "jump_in_air"
 step = 0.4
 tracks/0/type = "value"
@@ -446,8 +445,7 @@ tracks/11/keys = {
 "values": [ -10.1415 ]
 }
 
-[sub_resource type="Animation" id=3]
-resource_name = "jump_initial"
+[sub_resource type="Animation" id=4]
 step = 0.4
 tracks/0/type = "value"
 tracks/0/path = NodePath("Torso_lower:position")
@@ -594,7 +592,7 @@ tracks/11/keys = {
 "values": [ 0.0, -10.1415 ]
 }
 
-[sub_resource type="AnimationNodeBlendSpace1D" id=6]
+[sub_resource type="AnimationNodeBlendSpace1D" id=5]
 
 [node name="CharacterRig" type="Node2D"]
 position = Vector2( -1.5874, -1.5874 )
@@ -636,14 +634,14 @@ region_enabled = true
 region_rect = Rect2( 2.17529, 181.906, 45.8415, 80.8864 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/IdleStance = SubResource( 2 )
-anims/Walk = SubResource( 1 )
-anims/jump_in_air = SubResource( 4 )
-anims/jump_initial = SubResource( 3 )
+anims/IdleStance = SubResource( 1 )
+anims/Walk = SubResource( 2 )
+anims/jump_in_air = SubResource( 3 )
+anims/jump_initial = SubResource( 4 )
 next/IdleStance = "IdleStance"
 
 [node name="AnimationTree" type="AnimationTree" parent="AnimationPlayer"]
-tree_root = SubResource( 6 )
+tree_root = SubResource( 5 )
 anim_player = NodePath("..")
 active = true
 parameters/blend_position = -0.996004
