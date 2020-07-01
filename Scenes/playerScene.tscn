@@ -11,6 +11,8 @@ position = Vector2( 0.938995, -0.362 )
 collision_layer = 0
 script = ExtResource( 2 )
 
+[node name="awake_state" type="Node2D" parent="."]
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
 
@@ -25,12 +27,28 @@ current = true
 
 [node name="RayCast2D" type="RayCast2D" parent="RayCasts"]
 position = Vector2( 0, 115 )
+enabled = true
 collision_mask = 2147483651
 
 [node name="RayCast2D2" type="RayCast2D" parent="RayCasts"]
 position = Vector2( 45.2548, 117.121 )
+enabled = true
 collision_mask = 2147483651
 
 [node name="RayCast2D3" type="RayCast2D" parent="RayCasts"]
 position = Vector2( -41.0122, 115.707 )
+enabled = true
 collision_mask = 2147483651
+
+[node name="Health" type="Node2D" parent="."]
+
+[node name="debug_path" type="Label" parent="."]
+margin_left = -93.4948
+margin_top = -176.528
+margin_right = 89.5052
+margin_bottom = -129.528
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
