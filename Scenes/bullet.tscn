@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Sprites/bullet_sprite.png" type="Texture" id=1]
+[ext_resource path="res://Scenes/bullet.gd" type="Script" id=2]
+
+[node name="Bullet" type="KinematicBody2D"]
+script = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2( -576.238, -350.711 )
+polygon = PoolVector2Array( 570.124, 351.319, 574.097, 346.419, 578.335, 346.552, 580.189, 348.008, 580.454, 353.438, 578.6, 355.557, 574.23, 355.689 )
+
+[node name="bullet_sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )

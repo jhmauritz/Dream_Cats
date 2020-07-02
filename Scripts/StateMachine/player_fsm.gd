@@ -7,6 +7,9 @@ func _ready():
 	add_state("fall")
 	call_deferred("set_state", states.idle)
 
+func _process(delta):
+	parent.spawn_bullet()
+
 func _input(event):
 	if[states.idle, states.walk].has(state):
 		if event.is_action_pressed("jump"):
