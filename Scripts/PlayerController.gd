@@ -11,21 +11,17 @@ var is_grounded
 
 onready var raycasts = $RayCasts
 onready var anim_player = $CharacterRig/AnimationPlayer
+onready var state_label = $Label
 
-func _physics_process(delta):
-	_get_input()
+func _apply_gravity(delta):
 	velocity.y += gravity * delta
-	
+
+func _apply_movement():
 	velocity = move_and_slide(velocity, UP, SLOPE_STOP)
 	
 	is_grounded = _check_is_grounded()
-	_assign_animation()
 
-func _input(event):
-	if event.is_action_pressed("jump") && is_grounded:
-		velocity.y = jump_velocit
-
-func _get_input():
+func _handle_move_input():
 	var move_dir = -int(Input.is_action_pressed("move_left")) + int(Input.is_action_pressed("move_right"))
 	velocity.x = lerp(velocity.x, move_speed * move_dir, _get_h_weight())
 	if move_dir != 0:
@@ -39,14 +35,3 @@ func _check_is_grounded():
 		if raycast.is_colliding():
 			return true
 	return false
-
-func _assign_animation():
-	var anim = "IdleStanceAnim"
-	
-	if !is_grounded:
-		anim = "Jump"
-	elif velocity.x != 0:
-		anim = "WalkAnim"
-	
-	if anim_player.assigned_animation != anim:
-		anim_player.play(anim)
