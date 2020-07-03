@@ -82,3 +82,6 @@ func _set_health(value):
 
 func _on_InvulnerabilityTimer_timeout() -> void:
 	effects_anim.play("rest")
+	
+func _player_ref():
+	pass

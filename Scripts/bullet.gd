@@ -22,12 +22,12 @@ func _on_VisibilityNotifier2D_screen_exited():
 	queue_free()
 
 func _on_Bullet_area_entered(area: Area2D) -> void:
-	if area.has_method("enemy_damage"):
+	if area.has_method("_enemy_ref"):
 		queue_free()
-		area.enemy_damage(50)
+		area.enemy_damage(20)
 
 
 func _on_Bullet_body_shape_entered(body_id: int, body: Node, body_shape: int, area_shape: int) -> void:
-	if body.has_method("enemy_damage"):
+	if body.has_method("_enemy_ref"):
 		queue_free()
 		body.enemy_damage(20)

@@ -1,9 +1,163 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scripts/EnemyCloud.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/EnemyCloud.png" type="Texture" id=2]
 [ext_resource path="res://Scenes/Healthbar.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scripts/StateMachine/EnemyFSM.gd" type="Script" id=4]
+
+[sub_resource type="Animation" id=2]
+resource_name = "chase_anim"
+length = 0.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Collision:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 4.45459, 0.89093 ), Vector2( 4.45459, 0.89093 ), Vector2( 4.45459, 0.89093 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Collision:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 25.6441, 25.6441, -22.4 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("DamageTrigger/Trigger:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.2, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -3.77551, -4.24744 ), Vector2( -3.77551, -4.24744 ), Vector2( -3.77551, -4.24744 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("DamageTrigger/Trigger:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.2, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 25.6441, 25.6441, -22.4 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("EnemyCloud:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.2, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -2.20593, -5.87854 ), Vector2( -2.20593, -5.87854 ), Vector2( -2.20593, -5.87854 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("EnemyCloud:rotation_degrees")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.2, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 25.6441, 25.6441, -22.4 ]
+}
+
+[sub_resource type="Animation" id=1]
+resource_name = "patrol_anim"
+length = 0.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("EnemyCloud:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -2.20593, -5.87854 ), Vector2( -2.206, -100 ), Vector2( -2.20593, -5.87854 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("EnemyCloud:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, 0.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("DamageTrigger/Trigger:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.2, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -3.77551, -4.24744 ), Vector2( -3.776, -100 ), Vector2( -3.77551, -4.24744 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("DamageTrigger/Trigger:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.2, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, 0.0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Collision:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.2, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 4.45459, 0.89093 ), Vector2( 4.455, -100 ), Vector2( 4.45459, 0.89093 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Collision:rotation_degrees")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.2, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, 0.0 ]
+}
 
 [node name="EnemyCloudBoi" type="KinematicBody2D"]
 collision_layer = 3
@@ -29,10 +183,27 @@ polygon = PoolVector2Array( -45.5812, -89.2869, -1.58118, -97.2869, 86.4188, -65
 [node name="PlayerCheck" type="Area2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PlayerCheck"]
+position = Vector2( 1.41418, -5.65686 )
 polygon = PoolVector2Array( -262.378, -254.203, -443.095, -103.793, -470.034, 82.536, -144.52, 208.252, 206.811, 239.681, 427.936, 128.557, 407.732, -112.772, 239.362, -310.326 )
 
 [node name="FSM" type="Node2D" parent="."]
+position = Vector2( 0, 0.707123 )
 script = ExtResource( 4 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 81.6323
+margin_top = -146.776
+margin_right = 242.632
+margin_bottom = -99.7755
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EnemyAnim" type="AnimationPlayer" parent="."]
+anims/chase_anim = SubResource( 2 )
+anims/patrol_anim = SubResource( 1 )
 [connection signal="body_entered" from="DamageTrigger" to="." method="_on_DamageTrigger_body_entered"]
 [connection signal="body_entered" from="PlayerCheck" to="." method="_on_PlayerCheck_body_entered"]
 [connection signal="body_exited" from="PlayerCheck" to="." method="_on_PlayerCheck_body_exited"]
