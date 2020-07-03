@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scripts/EnemyCloud.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/EnemyCloud.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/Healthbar.tscn" type="PackedScene" id=3]
+
+[node name="EnemyCloudBoi" type="KinematicBody2D"]
+collision_layer = 3
+script = ExtResource( 1 )
+
+[node name="EnemyCloud" type="Sprite" parent="."]
+position = Vector2( -2.20593, -5.87854 )
+texture = ExtResource( 2 )
+
+[node name="Collision" type="CollisionPolygon2D" parent="."]
+position = Vector2( 4.45459, 0.89093 )
+polygon = PoolVector2Array( -18.6874, -70.3057, -48.6534, -43.3362, -60.64, -10.3734, -33.6705, 45.064, 24.7635, 37.5724, 74.2076, 1.61304, 47.2382, -52.326 )
+
+[node name="EnemyHealthBar" parent="." instance=ExtResource( 3 )]
+is_pulse = false
+
+[node name="DamageTrigger" type="Area2D" parent="."]
+
+[node name="Trigger" type="CollisionPolygon2D" parent="DamageTrigger"]
+polygon = PoolVector2Array( -45.5812, -89.2869, -1.58118, -97.2869, 86.4188, -65.2869, 104.419, -5.28687, 98.4188, 66.7131, 18.4188, 96.7131, -81.5812, 72.7131, -97.5812, 24.7131 )
+
+[node name="Navigation2D" type="Navigation2D" parent="."]
+[connection signal="body_entered" from="DamageTrigger" to="." method="_on_DamageTrigger_body_entered"]

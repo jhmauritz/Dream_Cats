@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scripts/HealthBar.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/health1.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/border_health.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/health3.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/health2.png" type="Texture" id=5]
+
+[node name="Healthbar" type="TextureProgress"]
+margin_left = -52.4812
+margin_top = -139.978
+margin_right = 47.5188
+margin_bottom = -114.978
+value = 100.0
+texture_over = ExtResource( 3 )
+texture_progress = ExtResource( 4 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+is_pulse = true
+
+[node name="HealthUnder" type="TextureProgress" parent="."]
+show_behind_parent = true
+margin_left = -1.23853
+margin_top = 0.909962
+margin_right = 98.7615
+margin_bottom = 40.9099
+value = 100.0
+texture_under = ExtResource( 2 )
+texture_over = ExtResource( 3 )
+texture_progress = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UpdateTween" type="Tween" parent="."]
+
+[node name="FlashTween" type="Tween" parent="."]
+
+[node name="PulseTween" type="Tween" parent="."]
+repeat = true
+playback/repeat = true

@@ -81,8 +81,8 @@ texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 32.1694, 81.4964, 165.951, 79.3616 )
 
-[node name="shoot_point" type="Node2D" parent="Torso_lower/ArmsGun"]
-position = Vector2( 82.9806, -9.30756 )
+[node name="ShootPoint" type="Position2D" parent="Torso_lower/ArmsGun"]
+position = Vector2( 85.3831, -10.6176 )
 
 [node name="Head" type="Sprite" parent="Torso_lower"]
 position = Vector2( -7.60675, -113.613 )

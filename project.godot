@@ -28,12 +28,20 @@ boot_splash/use_filter=false
 boot_splash/bg_color=Color( 0.811765, 0.454902, 0.780392, 1 )
 config/icon="res://Sprites/GreyCat_Head.png"
 
+[autoload]
+
+Global="*res://Scripts/Global.gd"
+
 [display]
 
 window/size/width=1280
 window/size/height=720
 window/stretch/mode="viewport"
 window/stretch/aspect="keep"
+
+[global]
+
+layer=false
 
 [input]
 
@@ -62,6 +70,15 @@ shoot={
 "events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":1,"pressed":false,"doubleclick":false,"script":null)
  ]
 }
+
+[layer]
+
+layer=false
+
+[layer_names]
+
+2d_physics/layer_1="Player"
+2d_physics/layer_2="Enemy"
 
 [physics]
 
