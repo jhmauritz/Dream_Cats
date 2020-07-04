@@ -5,7 +5,7 @@
 [ext_resource path="res://Scenes/Healthbar.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scripts/StateMachine/EnemyFSM.gd" type="Script" id=4]
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id=1]
 resource_name = "chase_anim"
 length = 0.5
 loop = true
@@ -82,8 +82,7 @@ tracks/5/keys = {
 "values": [ 25.6441, 25.6441, -22.4 ]
 }
 
-[sub_resource type="Animation" id=1]
-resource_name = "patrol_anim"
+[sub_resource type="Animation" id=2]
 length = 0.5
 loop = true
 tracks/0/type = "value"
@@ -183,8 +182,12 @@ polygon = PoolVector2Array( -45.5812, -89.2869, -1.58118, -97.2869, 86.4188, -65
 [node name="PlayerCheck" type="Area2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PlayerCheck"]
-position = Vector2( 1.41418, -5.65686 )
-polygon = PoolVector2Array( -262.378, -254.203, -443.095, -103.793, -470.034, 82.536, -144.52, 208.252, 206.811, 239.681, 427.936, 128.557, 407.732, -112.772, 239.362, -310.326 )
+position = Vector2( 3.53546, -3.82843 )
+polygon = PoolVector2Array( -272.535, -77.1716, -361.535, -93.1716, -423.535, 84.8284, -311.535, 96.8284, -236.129, 95.9805, -117.763, 59.272, -108.024, -29.1281, -184.535, -65.1716 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="PlayerCheck"]
+position = Vector2( 582.535, 5.17157 )
+polygon = PoolVector2Array( -406.535, -50.1716, -460.535, -21.1716, -470.034, 82.536, -391.535, 83.8284, -353.535, 80.8284, -255.535, 69.8284, -248.535, -99.1716, -320.535, -104.172 )
 
 [node name="FSM" type="Node2D" parent="."]
 position = Vector2( 0, 0.707123 )
@@ -202,8 +205,16 @@ __meta__ = {
 }
 
 [node name="EnemyAnim" type="AnimationPlayer" parent="."]
-anims/chase_anim = SubResource( 2 )
-anims/patrol_anim = SubResource( 1 )
+anims/chase_anim = SubResource( 1 )
+anims/patrol_anim = SubResource( 2 )
+
+[node name="PointA" type="Position2D" parent="."]
+pause_mode = 1
+position = Vector2( 345.776, 1.41425 )
+
+[node name="PointB" type="Position2D" parent="."]
+pause_mode = 1
+position = Vector2( -251.731, -0.707092 )
 [connection signal="body_entered" from="DamageTrigger" to="." method="_on_DamageTrigger_body_entered"]
 [connection signal="body_entered" from="PlayerCheck" to="." method="_on_PlayerCheck_body_entered"]
 [connection signal="body_exited" from="PlayerCheck" to="." method="_on_PlayerCheck_body_exited"]

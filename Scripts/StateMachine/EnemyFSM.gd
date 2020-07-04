@@ -6,8 +6,10 @@ func _ready() -> void:
 	call_deferred("set_state", states.patrol)
 
 func _state_logic(delta):
+	#match state:
+	#	states.chase:
+	#		parent._chase()
 	parent._apply_movement()
-	print(parent.is_player_here)
 
 func _get_transition(delta):
 	match state:
