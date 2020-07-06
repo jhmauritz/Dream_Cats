@@ -105,7 +105,7 @@ region_rect = Rect2( 2.17529, 181.906, 45.8415, 80.8864 )
 
 [node name="NewLeoBod" type="Node2D" parent="."]
 visible = false
-position = Vector2( 8.73071, 68.2582 )
+position = Vector2( 0.793729, -0.793739 )
 
 [node name="Torso_Lower" type="Polygon2D" parent="NewLeoBod"]
 texture = ExtResource( 4 )
@@ -124,6 +124,7 @@ bones = [ NodePath("hip"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
 
 [node name="Arm_Right" type="Polygon2D" parent="NewLeoBod"]
 position = Vector2( 5.17247, 17.1284 )
+rotation = -0.0114693
 texture = ExtResource( 4 )
 skeleton = NodePath("../../Skeleton2D")
 polygon = PoolVector2Array( 14.9375, 1, 16.1875, 5.125, 15.6875, 7.75, 14.3125, 10, 12, 9.9375, 13.3125, 11.875, 13.6875, 15.0625, 12.875, 17.625, 10.5625, 20, 9.5, 21.875, 9.125, 23.75, 11, 25.25, 11.4375, 26.625, 11.5, 28.8125, 11.875, 31.375, 9, 31.8125, 2.0625, 31.75, 0.4375, 29.5, 1.1875, 26.5625, 2.4375, 25.5625, 1.875, 21.9375, 1.5625, 20.25, 0.5625, 17.875, 0.3125, 14, 0.3125, 4.75, 2.9375, 2.6875, 6.4375, 1.25, 9, 0.1875 )
@@ -140,6 +141,7 @@ bones = [ NodePath("hip"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
 
 [node name="Head" type="Polygon2D" parent="NewLeoBod"]
 position = Vector2( -30.6772, -0.0174179 )
+rotation = 0.0201695
 texture = ExtResource( 4 )
 skeleton = NodePath("../../Skeleton2D")
 polygon = PoolVector2Array( 63, -0.0200005, 64.1875, 0.6675, 64.0625, 1.73, 64, 11.9175, 59.5625, 18.0425, 48.1875, 18.105, 47.125, 15.355, 47.6875, 14.0425, 44.5, 10.4175, 44.8125, 9.855, 44.875, 2.98, 46.4375, -0.0200005, 48.25, 0.0424995, 50.125, 2.9175, 54.5, 3.48, 57.0625, 3.0425, 61.625, -0.145 )
@@ -163,87 +165,81 @@ polygon = PoolVector2Array( 11.4375, 46.5625, 14.9375, 48.6875, 16, 51.5625, 15.
 uv = PoolVector2Array( 11.4375, 46.5625, 14.9375, 48.6875, 16, 51.5625, 15.75, 54.5, 15.75, 58.125, 17.8125, 59.5, 17.9375, 64.5625, 13.875, 65, 6.875, 64.1875, 4.5, 59.125, 5.0625, 48.8125 )
 bones = [ NodePath("hip"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("hip/Torso_lower"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("hip/Torso_lower/Torso_Upper"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("hip/Torso_lower/Torso_Upper/Head"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("hip/Torso_lower/Torso_Upper/Arm_Left_top"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("hip/Torso_lower/Torso_Upper/Arm_Left_top/Arm_Left_mid"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("hip/Torso_lower/Torso_Upper/Arm_Left_top/Arm_Left_mid/Arm_Left_bottom"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("hip/Torso_lower/Torso_Upper/ArmRight_top"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("hip/Torso_lower/Torso_Upper/ArmRight_top/ArmRight_mid"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("hip/Torso_lower/Torso_Upper/ArmRight_top/ArmRight_mid/ArmRight_lower"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("hip/Leg_right_top"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0.5, 1, 0, 0, 0 ), NodePath("hip/Leg_right_top/Leg_right_bottom"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("hip/Leg_left_top"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("hip/Leg_left_top/Leg_left_Bottom"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ) ]
 
-[node name="Skeleton2D" type="Skeleton2D" parent="."]
-visible = false
+[node name="Skeleton2D" type="Skeleton2D" parent="NewLeoBod"]
+position = Vector2( -9.52444, -68.6551 )
 
-[node name="hip" type="Bone2D" parent="Skeleton2D"]
+[node name="hip" type="Bone2D" parent="NewLeoBod/Skeleton2D"]
 position = Vector2( 33.1275, 118.625 )
 rest = Transform2D( 1, 0, 0, 1, 33.1275, 118.625 )
 
-[node name="Torso_lower" type="Bone2D" parent="Skeleton2D/hip"]
+[node name="Torso_lower" type="Bone2D" parent="NewLeoBod/Skeleton2D/hip"]
 position = Vector2( -0.0662155, -16.4879 )
 rest = Transform2D( 1, 0, 0, 1, -0.0662155, -16.4879 )
 
-[node name="Torso_Upper" type="Bone2D" parent="Skeleton2D/hip/Torso_lower"]
+[node name="Torso_Upper" type="Bone2D" parent="NewLeoBod/Skeleton2D/hip/Torso_lower"]
 position = Vector2( 0.0463791, -12.0937 )
 rest = Transform2D( 1, 0, 0, 1, 0.0463791, -12.0937 )
 
-[node name="Head" type="Bone2D" parent="Skeleton2D/hip/Torso_lower/Torso_Upper"]
+[node name="Head" type="Bone2D" parent="NewLeoBod/Skeleton2D/hip/Torso_lower/Torso_Upper"]
 position = Vector2( -0.0472488, -6.5909 )
-rotation = -1.66504
+rotation = -1.54663
 rest = Transform2D( -0.0941084, -0.995562, 0.995562, -0.0941084, -0.0472488, -6.5909 )
 default_length = 10.0
 
-[node name="Arm_Left_top" type="Bone2D" parent="Skeleton2D/hip/Torso_lower/Torso_Upper"]
+[node name="Arm_Left_top" type="Bone2D" parent="NewLeoBod/Skeleton2D/hip/Torso_lower/Torso_Upper"]
 position = Vector2( 9.91461, -1.82044 )
 rotation = -1.66504
 rest = Transform2D( -0.0941084, -0.995562, 0.995562, -0.0941084, 9.91461, -1.82044 )
 default_length = 10.0
 
-[node name="Arm_Left_mid" type="Bone2D" parent="Skeleton2D/hip/Torso_lower/Torso_Upper/Arm_Left_top"]
+[node name="Arm_Left_mid" type="Bone2D" parent="NewLeoBod/Skeleton2D/hip/Torso_lower/Torso_Upper/Arm_Left_top"]
 position = Vector2( -11.2519, 2.74158 )
 rest = Transform2D( 1, 0, 0, 1, -11.2519, 2.74158 )
 default_length = 10.0
 
-[node name="Arm_Left_bottom" type="Bone2D" parent="Skeleton2D/hip/Torso_lower/Torso_Upper/Arm_Left_top/Arm_Left_mid"]
+[node name="Arm_Left_bottom" type="Bone2D" parent="NewLeoBod/Skeleton2D/hip/Torso_lower/Torso_Upper/Arm_Left_top/Arm_Left_mid"]
 position = Vector2( -9.36098, -3.84448 )
 rotation = -3.11367
-scale = Vector2( 1, 1 )
 rest = Transform2D( -0.99961, -0.0279218, 0.0279218, -0.99961, -9.36098, -3.84448 )
 default_length = 3.0
 
-[node name="ArmRight_top" type="Bone2D" parent="Skeleton2D/hip/Torso_lower/Torso_Upper"]
+[node name="ArmRight_top" type="Bone2D" parent="NewLeoBod/Skeleton2D/hip/Torso_lower/Torso_Upper"]
 position = Vector2( -13.0257, 1.75237 )
-rotation = -1.66504
+rotation = -1.69904
 rest = Transform2D( -0.0941084, -0.995562, 0.995562, -0.0941084, -13.0257, 1.75237 )
 default_length = 10.0
 
-[node name="ArmRight_mid" type="Bone2D" parent="Skeleton2D/hip/Torso_lower/Torso_Upper/ArmRight_top"]
+[node name="ArmRight_mid" type="Bone2D" parent="NewLeoBod/Skeleton2D/hip/Torso_lower/Torso_Upper/ArmRight_top"]
 position = Vector2( -11.3138, -1.33551 )
 rest = Transform2D( 1, 0, 0, 1, -11.3138, -1.33551 )
 default_length = 10.0
 
-[node name="ArmRight_lower" type="Bone2D" parent="Skeleton2D/hip/Torso_lower/Torso_Upper/ArmRight_top/ArmRight_mid"]
+[node name="ArmRight_lower" type="Bone2D" parent="NewLeoBod/Skeleton2D/hip/Torso_lower/Torso_Upper/ArmRight_top/ArmRight_mid"]
 position = Vector2( -7.15703, -0.277468 )
 rotation = 3.01418
-scale = Vector2( 1, 1 )
 rest = Transform2D( -0.991894, 0.127065, -0.127065, -0.991894, -7.15703, -0.277468 )
 default_length = 4.0
 
-[node name="Leg_right_top" type="Bone2D" parent="Skeleton2D/hip"]
+[node name="Leg_right_top" type="Bone2D" parent="NewLeoBod/Skeleton2D/hip"]
 position = Vector2( -4.55695, 1.16721 )
 rotation = 1.30202
-scale = Vector2( 1, 1 )
 rest = Transform2D( 0.265556, 0.964095, -0.964095, 0.265556, -4.55695, 1.16721 )
 default_length = 10.0
 
-[node name="Leg_right_bottom" type="Bone2D" parent="Skeleton2D/hip/Leg_right_top"]
+[node name="Leg_right_bottom" type="Bone2D" parent="NewLeoBod/Skeleton2D/hip/Leg_right_top"]
 position = Vector2( 10.689, 1.96301 )
 rotation = -1.29852
-scale = Vector2( 1, 1 )
 rest = Transform2D( 0.26892, -0.963163, 0.963163, 0.26892, 10.689, 1.96301 )
 default_length = 5.0
 
-[node name="Leg_left_top" type="Bone2D" parent="Skeleton2D/hip"]
+[node name="Leg_left_top" type="Bone2D" parent="NewLeoBod/Skeleton2D/hip"]
 position = Vector2( 4.5878, -0.304367 )
 rotation = 1.30202
-scale = Vector2( 1, 1 )
 rest = Transform2D( 0.265556, 0.964095, -0.964095, 0.265556, 4.5878, -0.304367 )
 default_length = 10.0
 
-[node name="Leg_left_Bottom" type="Bone2D" parent="Skeleton2D/hip/Leg_left_top"]
+[node name="Leg_left_Bottom" type="Bone2D" parent="NewLeoBod/Skeleton2D/hip/Leg_left_top"]
 position = Vector2( 10.9807, 2.90907 )
 rotation = -1.31772
-scale = Vector2( 1, 1 )
 rest = Transform2D( 0.25038, -0.968148, 0.968148, 0.25038, 10.9807, 2.90907 )
 default_length = 4.0
