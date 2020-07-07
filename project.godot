@@ -10,11 +10,23 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "Node",
+"class": "Generator",
+"language": "GDScript",
+"path": "res://Scripts/MapGeneration/GenMap.gd"
+}, {
+"base": "Node",
+"class": "Rooms",
+"language": "GDScript",
+"path": "res://Scripts/MapGeneration/Rooms.gd"
+}, {
+"base": "Node",
 "class": "StateMachine",
 "language": "GDScript",
 "path": "res://Scripts/StateMachine/state_machine.gd"
 } ]
 _global_script_class_icons={
+"Generator": "",
+"Rooms": "",
 "StateMachine": ""
 }
 
@@ -79,6 +91,10 @@ layer=false
 
 2d_physics/layer_1="Player"
 2d_physics/layer_2="Enemy"
+
+[mono]
+
+debugger_agent/wait_for_debugger=true
 
 [physics]
 
