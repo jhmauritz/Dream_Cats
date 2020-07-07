@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/health3.png-e268b5c4740609f1b4f4f243f006a6af.stex"
+path="res://.import/GroundCloud.png-89a77a539360aaeff12f1c0bca38a62a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/health3.png"
-dest_files=[ "res://.import/health3.png-e268b5c4740609f1b4f4f243f006a6af.stex" ]
+source_file="res://Sprites/Floor/GroundCloud.png"
+dest_files=[ "res://.import/GroundCloud.png-89a77a539360aaeff12f1c0bca38a62a.stex" ]
 
 [params]
 

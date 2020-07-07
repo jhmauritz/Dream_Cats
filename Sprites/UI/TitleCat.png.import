@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/CloudTile.png-1ac33ded0a7ad3650f9519c8f69b4eda.stex"
+path="res://.import/TitleCat.png-b7cf7cab9f19670536bd627c8653bdde.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/CloudTile.png"
-dest_files=[ "res://.import/CloudTile.png-1ac33ded0a7ad3650f9519c8f69b4eda.stex" ]
+source_file="res://Sprites/UI/TitleCat.png"
+dest_files=[ "res://.import/TitleCat.png-b7cf7cab9f19670536bd627c8653bdde.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

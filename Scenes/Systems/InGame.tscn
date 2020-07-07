@@ -1,8 +1,10 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scenes/Generation_Rooms/PackedRoomScene.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Scenes/playerScene.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Scenes/EnemyCloudBoi.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Player/playerScene.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Enemy/EnemyCloudBoi.tscn" type="PackedScene" id=3]
+
+
 
 [node name="InGame" type="Node2D"]
 position = Vector2( 4.75681, 3.56761 )

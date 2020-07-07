@@ -22,15 +22,15 @@ _global_script_class_icons={
 
 config/name="DreamCats"
 config/description="Kill Nightmares as a special kind of emotional support cat"
-run/main_scene="res://Scenes/playerScene.tscn"
-boot_splash/image="res://Sprites/GreyCat_Head.png"
+run/main_scene="res://Scenes/UIandUX/Title Screen.tscn"
+boot_splash/image="res://Sprites/UI/GreyCat_Head.png"
 boot_splash/use_filter=false
 boot_splash/bg_color=Color( 0.811765, 0.454902, 0.780392, 1 )
-config/icon="res://Sprites/GreyCat_Head.png"
+config/icon="res://Sprites/UI/GreyCat_Head.png"
 
 [autoload]
 
-Global="*res://Scripts/Global.gd"
+Global="*res://Scripts/Systems/Global.gd"
 
 [display]
 

@@ -5,7 +5,7 @@ signal killed()
 
 const UP = Vector2(0, -1)
 const SLOPE_STOP = 64
-const bullet_pl = preload("res://Scenes/bullet.tscn")
+const bullet_pl = preload("res://Scenes/Player/bullet.tscn")
 
 var velocity = Vector2()
 var move_speed = 96*5

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/border_health.png-e6653bd56a6bd5cf794426264de8da4b.stex"
+path="res://.import/optionbutton.png-7d463170489fbf75498a7b6717731435.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/border_health.png"
-dest_files=[ "res://.import/border_health.png-e6653bd56a6bd5cf794426264de8da4b.stex" ]
+source_file="res://Sprites/UI/optionbutton.png"
+dest_files=[ "res://.import/optionbutton.png-7d463170489fbf75498a7b6717731435.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
