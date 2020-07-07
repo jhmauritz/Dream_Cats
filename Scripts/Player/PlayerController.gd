@@ -10,7 +10,7 @@ const bullet_pl = preload("res://Scenes/Player/bullet.tscn")
 var velocity = Vector2()
 var move_speed = 96*5
 var gravity = 1200
-var jump_velocit = -720
+export (float) var jump_velocit = -720
 var is_grounded
 var bullet = null
 var move_direction

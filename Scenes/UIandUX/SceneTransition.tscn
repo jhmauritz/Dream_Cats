@@ -18,20 +18,24 @@ tracks/0/keys = {
 }
 
 [node name="SceneTransition" type="CanvasLayer"]
+layer = 0
+follow_viewport_enable = true
 script = ExtResource( 1 )
 
 [node name="Control" type="Control" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
+mouse_filter = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="ColorRect" type="ColorRect" parent="Control"]
 modulate = Color( 1, 1, 1, 0 )
+show_behind_parent = true
 anchor_right = 1.0
 anchor_bottom = 1.0
-mouse_filter = 1
+mouse_filter = 2
 color = Color( 0.141176, 0.0117647, 0.168627, 1 )
 __meta__ = {
 "_edit_use_anchors_": false

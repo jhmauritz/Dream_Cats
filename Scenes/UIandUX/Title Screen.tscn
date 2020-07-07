@@ -11,13 +11,11 @@
 script = ExtResource( 7 )
 
 [node name="Background" type="Sprite" parent="."]
-visible = false
 scale = Vector2( 20.1034, 11.254 )
 texture = ExtResource( 1 )
 centered = false
 
 [node name="GreyCat_Head" type="Sprite" parent="Background"]
-visible = false
 position = Vector2( 53.0518, 40.2742 )
 rotation = 0.336616
 scale = Vector2( 0.59941, 0.823627 )
@@ -75,13 +73,4 @@ flat = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="Button" type="Button" parent="."]
-margin_left = 644.0
-margin_right = 656.0
-margin_bottom = 632.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
 [connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/PlayButton" to="." method="_on_PlayButton_pressed"]
-[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
