@@ -16,4 +16,4 @@ position = Vector2( 1117.09, 381.526 )
 position = Vector2( -186.582, 712.807 )
 
 [node name="StarterRoom" parent="." instance=ExtResource( 1 )]
-position = Vector2( 29.6613, 175.363 )
+position = Vector2( 93.2432, 169.432 )
