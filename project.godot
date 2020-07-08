@@ -27,12 +27,7 @@ _global_script_classes=[ {
 "base": "Control",
 "class": "Joystick",
 "language": "GDScript",
-"path": "res://Joystick/Joystick.gd"
-}, {
-"base": "KinematicBody2D",
-"class": "Player",
-"language": "GDScript",
-"path": "res://Test/Player.gd"
+"path": "res://addons/Joystick/Joystick.gd"
 }, {
 "base": "Node",
 "class": "StateMachine",
@@ -44,7 +39,6 @@ _global_script_class_icons={
 "AsepriteImporter": "",
 "EditorTheme": "",
 "Joystick": "",
-"Player": "",
 "StateMachine": ""
 }
 
