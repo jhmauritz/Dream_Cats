@@ -1,6 +1,6 @@
 extends Node2D
 
-const FILE_NAME = "user://game-data.json"
+const FILE_NAME = "user://sound_data.save"
 
 var save_dict = {
 		"filename": get_filename(),
@@ -56,21 +56,17 @@ func _on_novol_pressed():
 func save():
 	var file = File.new()
 	file.open(FILE_NAME, File.WRITE)
-	file.store_string(to_json(save_dict))
+	file.store_var(Master_vol)
 	file.close()
 
 func load_data():
 	var file = File.new()
 	if file.file_exists(FILE_NAME):
 		file.open(FILE_NAME, File.READ)
-		var data = parse_json(file.get_as_text())
+		Master_vol = file.get_var()
 		file.close()
-		if typeof(data) == TYPE_DICTIONARY:
-			save_dict = data
-		else:
-			printerr("Corrupted data!")
 	else:
-		printerr("No saved data!")
+		Master_vol = 0
 
 
 
