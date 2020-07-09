@@ -80,7 +80,6 @@ __meta__ = {
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 6 )
 autoplay = true
-bus = "Music"
 
 [node name="OptionsMenu" type="MarginContainer" parent="."]
 visible = false
@@ -173,7 +172,9 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Node2D" parent="." instance=ExtResource( 8 )]
+[node name="SoundParent" type="Node2D" parent="."]
 position = Vector2( 1180.17, 82.7003 )
+
+[node name="sound" parent="SoundParent" instance=ExtResource( 8 )]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/PlayButton" to="." method="_on_PlayButton_pressed"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/OptionButton" to="." method="_on_OptionButton_pressed"]

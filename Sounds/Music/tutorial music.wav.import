@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/tutorial music.wav-18a8a69d6f08cc1f792932a25bbc0f7d.sample"
+
+[deps]
+
+source_file="res://Sounds/Music/tutorial music.wav"
+dest_files=[ "res://.import/tutorial music.wav-18a8a69d6f08cc1f792932a25bbc0f7d.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=true
+compress/mode=0
